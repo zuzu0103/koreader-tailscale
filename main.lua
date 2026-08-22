@@ -44,6 +44,7 @@ function TailscalePlugin:init()
     if self.ui and self.ui.menu then
         self.ui.menu:registerToMainMenu(self)
     end
+    self:connectTailscale()
 
 -- Register a Dispatcher action so the toggle appears under "System action..."
 Dispatcher:registerAction("toggle_tailscale_vpn",
